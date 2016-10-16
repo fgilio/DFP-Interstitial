@@ -1,0 +1,114 @@
+.interstitialAd-overlay {
+  position: fixed;
+  z-index: 10000;
+  display: block;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 1;
+  margin: auto;
+  padding: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  text-align: center;
+  alignment-baseline: central;
+}
+
+.interstitialAd-hide {
+  z-index: -10000 !important;
+  display: none !important;
+  width: 0% !important;
+  height: 0% !important;
+  opacity: 0 !important;
+}
+
+.interstitialAd-hide .close-interstitial,
+.interstitialAd-hide iframe {
+  display: none;
+}
+
+.interstitialAd-modal {
+  position: fixed;
+  z-index: 10001;
+  display: block;
+  margin: auto;
+  padding: 0;
+  text-align: center;
+  alignment-baseline: central;
+  height: 1px;
+  width: 1px;
+}
+
+.interstitialAd-modal-show {
+  height: auto;
+  width: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.interstitialAd-modal iframe {
+  margin-top: 25px;
+  box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0);
+  cursor: pointer;
+}
+
+.close-interstitial {
+  cursor: pointer;
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 25px;
+  margin: 0;
+  padding: 0;
+  font-size: 20px;
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  line-height: 50px;
+  text-align: center;
+  color: rgba(255, 255, 255, 0);
+}
+
+.interstitialAd-modal-show .close-interstitial {
+  color: rgba(255, 255, 255, .9);
+}
+
+.interstitialAd-modal-show iframe {
+  box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.4);
+}
+
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.fadeIn {
+  animation-name: fadeIn;
+  animation-duration: 250ms;
+}
+
+.interstitialAd-overlay,
+.interstitialAd-modal {
+  margin-top: 60px;
+}
+
+@media only screen and (min-width: 668px) {
+  .interstitialAd-overlay,
+  .interstitialAd-modal {
+    margin-top: 100px;
+  }
+}
